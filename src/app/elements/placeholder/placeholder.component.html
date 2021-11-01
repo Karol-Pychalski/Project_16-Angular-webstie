@@ -1,0 +1,21 @@
+<div class="ui placeholder">
+  <div *ngIf="header" class="image header">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- appTimes is a selector (directive) from times.directive.ts -->
+  <div class="paragraph">
+    <div *appTimes="lines" class="line"></div>
+  </div>
+</div>
+
+
+<!-- zamiast powyższego, można zastosować poniższą konstrukcję, ale nie ma wówczas potrzeby tworzenia dyrektywy Times
+  <div class="paragraph">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</div>
+-->

@@ -1,0 +1,16 @@
+<!-- Placeholder created in v.109 -->
+<!-- elements-home component is responsible to show placeholder component-->
+
+<!-- header visibility can be modified here or in placeholder.module.ts at @Input-->
+<!-- <app-placeholder [header]="false"></app-placeholder> -->
+
+<!-- Different way to implement title and divider to an element (but must be repeated several times if we don't want to extract it as a separated component - as we did [shared])
+<h1>Placeholder Component</h1>
+<div class="ui divider"></div> -->
+
+<!-- app-divider component takes title property as input:
+<app-divider title="Placeholder Component"></app-divider> -->
+
+<!-- [lines] is property -->
+<app-divider></app-divider>
+<app-placeholder [lines]="10"></app-placeholder>
