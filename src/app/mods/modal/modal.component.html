@@ -1,0 +1,42 @@
+<!-- creating modal pop-up window (since vid. 137)-->
+<!-- adding onCloseClick in vid.143 and stopPropagation in vid.144 -->
+<!-- $event.stopPropagation is pure jS code (not angular)-->
+<!-- it can be only 1 <ng-content> inside component, but we can add select 
+  [modalTitle] is atribute because it has []-->
+
+<div (click)="onCloseClick()" class="ui dimmer visible active">
+  <div (click)="$event.stopPropagation()" class="ui modal visible active">
+    <i (click)="onCloseClick()" class="close icon"></i>
+    <div class="header">
+      <ng-content select="[modalTitle]"></ng-content>
+    </div>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+    <div class="actions actions-default">
+      <button (click)="onCloseClick()" class="ui button">Ok</button>
+    </div>
+    <div class="active">
+      <ng-content select="[modalFooter]"></ng-content>
+    </div>
+  </div>
+</div>
+
+<!-- hard coded modal window (before changes to make it more reusable in vid.145)
+<div (click)="onCloseClick()" class="ui dimmer visible active">
+  <div (click)="$event.stopPropagation()" class="ui modal visible active">
+    <i (click)="onCloseClick()" class="close icon"></i>
+    <div class="header">
+      Modal
+    </div>
+    <div class="content">
+      <p>
+        Some content.
+      </p>
+    </div>
+    <div class="actions">
+      <button (click)="onCloseClick()" class="ui button">Ok</button>
+    </div>
+  </div>
+</div>
+-->

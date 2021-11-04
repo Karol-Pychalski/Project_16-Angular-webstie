@@ -15,12 +15,12 @@
     <!-- <a href="/elements">Elements</a> -->
     <!-- routerLinkActive can has any name, it works like a class with name-->
     <!-- Semantic-ui-css is adding a highlighting to routerLinkActive -->
-    <a routerLink="./elements" routerLinkActive="active" class="item">Elements</a>
+    <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
     <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>
+    <a routerLink="/views" routerLinkActive="active" class="item">Views</a>
+    <a routerLink="/mods" routerLinkActive="active" class="item">Modules</a>
+  </div>
+  <div class="ui segment">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<div class="ui segment">
-  <router-outlet></router-outlet>
-</div>
-
-<div>Test: Component will be created here</div>

@@ -1,0 +1,19 @@
+<!-- Table component created in video 119 -->
+<table [ngClass]="classNames" class="ui table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header.label }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- record is an object which we're iterating over, json pipe is to print out it nice -->
+    <!-- record[header.key] - it means: record take a look at [header.key] property-->
+    <tr *ngFor="let record of data">
+      <td *ngFor="let header of headers">
+        {{ record[header.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>

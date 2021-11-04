@@ -1,0 +1,33 @@
+<!-- added in vid. 146 -->
+<!-- vid.147:  we use <ng-container> because we don't want to have any genral div, ul, li or any other wrapping container/element
+  for all divs with titles and contents, exactly like there is in original version of accordion in Semantic UI -->
+<!-- vid. 148:  let i = index thanks to it we know index of an item we're iterating over, so we can do a comparison between 'i' here and opendItemIndex property in accordion.component.html
+if these two things are equal then we want to apply active class to <div class="content active"  -->
+
+<div class="ui accordion styled">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div [ngClass]="{ active: i === openedItemIndex }" class="title" (click)="onClick(i)">
+      <i class="dropdown icon"></i>
+      {{ item.title }}
+    </div>
+    <div [ngClass]="{ active: i === openedItemIndex }" class="content">
+      <p>{{ item.content }}</p>
+    </div>
+  </ng-container>
+</div>
+
+
+
+<!-- hard coded active class before changes in vid. 148:
+<div class="ui accordion styled">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div class="title">
+      <i class="dropdown icon"></i>
+      {{ item.title }}
+    </div>
+    <div class="content active">
+      <p>{{ item.content }}</p>
+    </div>
+  </ng-container>
+</div>
+-->

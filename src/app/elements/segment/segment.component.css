@@ -1,0 +1,4 @@
+/* added in v.117*/
+div.ui.icon.header:empty {
+    display: none;
+}

@@ -1,0 +1,6 @@
+/* vid. 134 */
+/* :not(:first-of-type) - means find all host elements which are not the first one */
+:host:not(:first-of-type) {
+  display: block;
+  margin-top: 20px;
+}

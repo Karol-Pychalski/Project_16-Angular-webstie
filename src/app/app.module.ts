@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+//import { BiographyComponent } from './colections/biography/biography.component';
 
 //w imports znajdują się zaimportowane klasy z poszczególnych plików module.ts dla odpowiednich komponentów
 //providers: - nie należy na to patrzeć (przestarzały element)

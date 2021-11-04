@@ -1,3 +1,31 @@
-<p>collections-home works!</p>
-<app-placeholder [lines]="10"></app-placeholder>
+<!-- striped celled - classes from Semantic UI-->
+<app-divider>Table Component</app-divider>
+<app-table classNames="striped celled" [data]="data" [headers]="headers"></app-table>
+
+
+<!-- moved to tabs in v.130-->
+<app-divider>Tab Menu</app-divider>
+<app-tabs>
+  <!--[routerLinkActiveOptions]="" - property binding syntax
+      "{ exact: true }" - means we need to be exactly on "./" path (/collections) in order to consider this link (as entire <a>) to be active 
+  -->
+  <a 
+    class="item" 
+    routerLink="./" 
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >Biography</a>
+  <!-- inne możliwe wersje:
+  <a class="item" routerLink="/collections" routerLinkActive="active">Biography</a>  - "/collections" here it will be treated as string
+  <a class="item" [routerLink]="./" routerLinkActive="active">Biography</a>   - "./" then it will be treated as code
+  <a class="item" [routerLink]="['./', 'abc']" routerLinkActive="active">Biography</a>  - ["./, "abc"] it's like an array of strings which angular will take and connect in one address for example: "/collections/abc" (vid.128)
+  <a class="item" [routerLink]="['./', partOfLink]" routerLinkActive="active">Biography</a>  - we can add a new property partOfLink='abc' to class (ex. CollectionsHomeComponent) as a part of the addresss, then angular will conect it together
+  -->
+  <a class="item" routerLink="./companies" routerLinkActive="active">Companies</a>
+  <!--inne możliwe wersje:
+  <a class="item" routerLink="companies" routerLinkActive="active">Companies</a>
+  -->
+  <a class="item" routerLink="./partners" routerLinkActive="active">Partners</a>
+</app-tabs>
+
 

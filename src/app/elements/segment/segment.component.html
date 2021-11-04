@@ -1,0 +1,35 @@
+<!-- video 115/116-->
+<div class="ui placeholder segment">
+    <div class="ui icon header">
+        <ng-content select="header"></ng-content>
+    </div>
+    <ng-content></ng-content>
+</div>
+
+<!-- dla powyższego odwołania app-segment wygląda tak:
+    <app-segment>
+        <header>
+            <i class="pdf...."></i>
+-->
+
+<!-- możliwe inne odwołania
+    np. do klasy:
+<ng-content select=".icon-header"></ng-content>
+    wtedy app-segment wyglądałby tak:
+    <app-segment>
+        <div class="iconHeader">
+            <i class="pdf...."></i
+
+    np. do listy:
+<ng-content select="ul"></ng-content>
+    <app-segment>
+        <ul>
+            <i class="pdf...."></i>
+
+    np. do elementu w app-segment:
+<ng-content select="[iconHeader]"></ng-content>
+    wtedy app-segment wyglądałby tak:
+    <app-segment>
+        <div iconHeader>
+            <i class="pdf...."></i>
+-->

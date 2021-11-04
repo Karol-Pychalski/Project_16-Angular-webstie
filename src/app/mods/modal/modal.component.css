@@ -1,0 +1,17 @@
+/* added in vid.145/*
+/* empty - will look for any element with actions class which has no child component and no custom content inside (like modalFooter etc.)*/
+.actions:empty {
+  display: none;
+}
+
+/* below two CSS rules work together as tandem */
+/* + means sibling element - the rule has two conditions: must be an empty element and there is a sibling element that has a matching class (it this case: actions-default class) */
+/* sibling element will be any <div> or <i> inside the same main <div> container (in modal.component.html */
+/* actions-default means: by default always hide an element with actions-default class */
+.actions-default {
+  display: none;
+}
+
+.actions:empty + .actions-default {
+  display: block;
+}
